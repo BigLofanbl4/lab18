@@ -4,7 +4,7 @@
 import sys
 
 if __name__ == "__main__":
-    if (len(sys.argv) != 2):
+    if len(sys.argv) != 2:
         print("FileName is not given!", file=sys.stderr)
         sys.exit(1)
     file_name = sys.argv[1]
@@ -17,6 +17,6 @@ if __name__ == "__main__":
         prev_word = ""
 
         for curr_word in sentence_words:
-            if (prev_word == curr_word):
+            if prev_word == curr_word:
                 print(f"Line: {line_num + 1}, repeating word: {curr_word}")
             prev_word = curr_word
